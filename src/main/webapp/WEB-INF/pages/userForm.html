@@ -14,13 +14,38 @@
     <h1>Add User</h1>
 
     <form th:action="@{/add}" th:object="${addUser}" method="post">
-        <table>
+        <table border="1">
+
+            <tr>
+            <th>First_Name</th>
+            <th>Last_Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Action</th>
+            </tr>
             <!--<tr><p>Id: <input th:readonly="id" th:type="number" th:value="*{id}"></p></tr>-->
-            <tr><p>First_Name: <input th:type="text" th:field="*{firstName}"></p></tr>
-            <tr><p>Last_Name: <input th:type="text" th:field="*{lastName}"></p></tr>
-            <tr><p>Age: <input th:type="number" th:field="*{age}"></p></tr>
-            <tr><p>Email: <input th:type="text" th:field="*{email}"></p></tr>
-            <tr><p>Action: <input th:type="submit" th:value="Add"></p></tr>
+            <tr>
+                <td><label>
+                    <input th:type="text" th:field="*{firstName}">
+                </label></td>
+                <td> <input th:type="text" th:field="*{lastName}"> </td>
+                <td> <input th:type="number" th:field="*{age}"> </td>
+                <td> <input th:type="text" th:field="*{email}"> </td>
+                <td> <input th:type="submit" th:value="Add"> </td>
+
+
+              <!--  <p>Last_Name: <input th:type="text" th:field="*{lastName}"></p>
+
+
+                <p>Age: <input th:type="number" th:field="*{age}"></p>
+
+
+                <p>Email: <input th:type="text" th:field="*{email}"></p>
+
+
+                <p>Action: <input th:type="submit" th:value="Add"></p>-->
+            </tr>
+
         </table>
     </form>
 
